@@ -1,0 +1,24 @@
+{
+  "name": "auth-system",
+  "version": "1.0.0",
+  "description": "Authentication system with signup, email verification, and login",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "init-db": "cd backend && npm run init-db"
+  },
+  "keywords": [
+    "authentication",
+    "signup",
+    "login",
+    "email-verification"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
