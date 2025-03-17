@@ -1,0 +1,15 @@
+const express = require('express');
+const authController = require('../controllers/auth.controller');
+
+const router = express.Router();
+
+// Register a new user
+router.post('/signup', authController.signup);
+
+// Verify user email
+router.get('/verify/:token', authController.verify);
+
+// Login user
+router.post('/login', authController.login);
+
+module.exports = router;
